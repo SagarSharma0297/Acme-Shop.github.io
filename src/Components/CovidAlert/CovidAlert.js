@@ -1,8 +1,10 @@
+import React from 'react';
+import classes from './CovidAlert.module.css';
 const CovidAlert = () => {
     return (
         <>
-        <div>How we're responding to COVID-19</div>
-        <div>
+        <div className={classes.pageTitle}> <h1>How we're responding to COVID-19</h1></div>
+        <div className={classes.container}>
           <h1>What’s a Rich Text element?</h1>
           <p>The rich text element allows you to create and format headings, paragraphs, blockquotes, images, and video all in one place instead of having to add and format them individually. Just double-click and easily create content.</p>
           <h3>Static and dynamic content editing</h3>

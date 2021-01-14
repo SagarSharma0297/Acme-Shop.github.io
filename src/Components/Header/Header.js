@@ -1,9 +1,11 @@
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import classes from './Header.module.css';
 import { useHistory } from 'react-router-dom';
-import { Redirect } from "react-router-dom";
+import { connect } from 'react-redux';
+import React from 'react';
+import SideBar from './sidebar';
 
-const Header = () => {
+const Header = ({count,cartItems}) => {
     let history = useHistory();
     return (  
        
@@ -23,16 +25,23 @@ const Header = () => {
                 </div>
                 <div className={classes.menuWrapper}>
                     <Link className={classes.menuItems} to="/">Home</Link>
-                    <Link className={classes.menuItems} to="./About">About</Link>
-                    <Link className={classes.menuItems} to="./Shop">Shop</Link>
-                    <Link className={classes.menuItems} to="./Donation">Donate</Link>
-                    <Link className={classes.menuItems} to="./Contact">Contact</Link>
-                    <div className={classes.cartIcon}><i class="fas fa-shopping-cart"></i><span>0</span></div>
+                    <Link className={classes.menuItems} to="/about">About</Link>
+                    <Link className={classes.menuItems} to="/shop">Shop</Link>
+                    <Link className={classes.menuItems} to="/donation">Donate</Link>
+                    <Link className={classes.menuItems} to="/contact">Contact</Link>
+                    <div onClick={()=>{
+                        
+                    }} className={classes.cartIcon}><i className="fas fa-shopping-cart"></i><span>{count}</span></div>
                 </div>
             </div>
-        </div>
+        </div> 
+        <SideBar  />
         </>
     );
 }
- 
-export default Header;
+const mapStateToProps = (store) =>({
+    count: store.cart.length,
+    cartItems: store.cart
+})
+export default connect(mapStateToProps)(Header);
+

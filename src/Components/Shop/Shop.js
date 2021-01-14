@@ -61,9 +61,10 @@ class Shop extends Component {
 }
 
 const Card = (props) => {
-    return (
+    let path = "/productdetail/"+props.props.id;
+    return (  
         <>  
-            <Link className={classes.card} to='/productdetails'>
+            <Link className={classes.card} to={path}>
                 <img src={props.props.preview} alt='itemphoto'></img>
                 <div className={classes.cardDetail}>
                     {console.log(props.props.brand)}

@@ -1,0 +1,66 @@
+.mainTitle{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    height: 100px;
+    padding: 0px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 20px;
+}
+.mainDiv{
+    padding: 50px 100px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.imageSection{
+    width: 50%;
+}
+.imageSection img{
+    width:100%;
+    border-radius: 8px;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.2);
+}
+.detailsSection{
+    width: 50%;
+    padding:0px 60px;
+}
+.detailsSection h1{
+    font-size: 2.5rem;
+    color: rgba(0, 0, 0, 0.85);
+    font-weight: bold;
+}
+.detailsSection p:first-of-type{
+    font-size: 18px;
+    margin: 16px 0px;
+    font-weight: bold;
+}
+.detailsSection input{
+    width: 50px;
+    border-radius: 4px;
+    border: 1px solid black;
+}
+.detailsSection button{
+    margin: 25px 0px;
+    border-style: none;
+    padding: 4px 16px;
+    border-radius: 6px;
+    color: #eb5757;
+    font-weight: bold;
+    border: 1px solid #eb5757;
+    font-size: 18px;
+}
+.detailsSection button:hover{
+    background-color: #eb5757;
+    color: white;
+}
+.detailsSection h4{
+    color: rgba(0, 0, 0, 0.85);
+    font-weight: 600;
+}
+.detailsSection p:last-of-type{
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.7);
+}

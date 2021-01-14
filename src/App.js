@@ -1,13 +1,14 @@
-import Header from './Header';
+import Header from './Components/Header/Header';
 import './App.css';
-import Home from './Components/Home';
-import About from './Components/About';
+import Home from '../src/Components/Home/Home';
+import About from './Components/About/About';
 import Shop from './Components/Shop/Shop';
 import Donation from './Components/Donation';
-import Contact from './Components/Contact';
-import Footer from './Components/Footer';
-import CovidAlert from './Components/CovidAlert';
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Contact from './Components/Contact/Contact';
+import CovidAlert from './Components/CovidAlert/CovidAlert';
+import ProductDetail from './Components/ProductDetail/ProductDetail';
+import { BrowserRouter, Route } from "react-router-dom";
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
         <Route path='/Donation' component={Donation} />
         <Route path='/Contact' component={Contact} />
         <Route path='/CovidAlert' component={CovidAlert} />
+        <Route path='/productdetail/:pId' component={ProductDetail} />
+        <Footer/>
       </BrowserRouter>
 
     </>

@@ -1,0 +1,20 @@
+.mainWrapper{
+    width: 45%;
+    height: 550px;
+    background: linear-gradient(90deg, #222, rgba(34, 34, 34, 0.18) 76%), url("https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e84f1e1f02ef1408ff221cc_vinicius-amano-4mK2KVuYrDs-unsplash%20(1)%20(1).jpg");
+    background-size:auto,cover;
+    background-position:80% 80%,80% 80%;
+}
+.contactCard{
+    background-color: white;
+    margin: 16px;
+    width: 320px;
+    border-radius: 6px;
+    color: #222;
+    text-align: center;
+    padding: 50px;
+}
+.contactCard img{
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
