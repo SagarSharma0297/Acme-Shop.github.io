@@ -5,8 +5,8 @@ import { connect } from 'react-redux';
 import React from 'react';
 import SideBar from './sidebar';
 
-const Header = ({count,cartItems}) => {
-    let history = useHistory();
+const Header = ({count}) => {
+    let history = useHistory(); 
     return (  
        
         <>
@@ -29,13 +29,11 @@ const Header = ({count,cartItems}) => {
                     <Link className={classes.menuItems} to="/shop">Shop</Link>
                     <Link className={classes.menuItems} to="/donation">Donate</Link>
                     <Link className={classes.menuItems} to="/contact">Contact</Link>
-                    <div onClick={()=>{
-                        
-                    }} className={classes.cartIcon}><i className="fas fa-shopping-cart"></i><span>{count}</span></div>
+                    <div className={classes.cartIcon}><i className="fas fa-shopping-cart"></i><span>{count}</span></div>
                 </div>
             </div>
         </div> 
-        <SideBar  />
+        <SideBar/>
         </>
     );
 }

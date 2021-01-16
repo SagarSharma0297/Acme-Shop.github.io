@@ -15,7 +15,6 @@ class Shop extends Component {
     componentDidMount(){
         axios.get("https://5d76bf96515d1a0014085cf9.mockapi.io/product")
         .then((apiResult)=>{
-            console.log(apiResult.data)
             this.setState({
                 productData:apiResult.data,
                 loader:false,
@@ -51,7 +50,7 @@ class Shop extends Component {
                     <div className={classes.filter}>Packs</div>
                 </div>
                 <div style={{maxWidth:"75%",minWidth:'75%',minHeight:'300px',flexWrap:'wrap',display:'flex',justifyContent:'center',alignItems:'center'}} className={classes.cardWrapper}>
-                    {this.state.loader ? <div className="spinner-border"></div> : this.state.productData.map(item=><Card props={item} />)}
+                    {this.state.loader ? <div className="spinner-border"></div> : this.state.productData.map((item,index)=><Card props={item} key={index} />)}
                 </div>
             </div>
         </div>
@@ -67,7 +66,6 @@ const Card = (props) => {
             <Link className={classes.card} to={path}>
                 <img src={props.props.preview} alt='itemphoto'></img>
                 <div className={classes.cardDetail}>
-                    {console.log(props.props.brand)}
                     <h1>{props.props.name}</h1>
                     <p>Rs. {props.props.price}</p>
                     <button>Details</button>

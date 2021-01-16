@@ -73,6 +73,7 @@
     width: 35%;
     height: 100vh;
     top: 0;
+    left: 65%;
     z-index: 5;
     position:fixed;
     background-color: white;

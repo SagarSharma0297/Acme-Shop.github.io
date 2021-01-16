@@ -1,9 +1,21 @@
 .mainWrapper{
+    display: flex;
+    justify-content: space-between;
+    background-color: #222;
+}
+.backgroundwWrapper{
     width: 45%;
     height: 550px;
     background: linear-gradient(90deg, #222, rgba(34, 34, 34, 0.18) 76%), url("https://assets.website-files.com/5e7ff3ec0c4ef4c974fa99e3/5e84f1e1f02ef1408ff221cc_vinicius-amano-4mK2KVuYrDs-unsplash%20(1)%20(1).jpg");
     background-size:auto,cover;
     background-position:80% 80%,80% 80%;
+}
+.contactCardWrapper > h1{
+    color: white;
+    font-weight: bold;
+} 
+.contactCardWrapper{
+    margin: 50px 0px 50px 50px;
 }
 .contactCard{
     background-color: white;
@@ -12,9 +24,32 @@
     border-radius: 6px;
     color: #222;
     text-align: center;
-    padding: 50px;
+    padding: 30px;
 }
 .contactCard img{
     margin-top: 0px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+}
+.contactCard button{
+    padding: 5px 25px;
+    color: white;
+    border-style: none;
+    border-width: 1px;
+    border-radius: 5px;
+    background-color: #eb5757;
+    -webkit-transition: border-color 300ms ease, background-color 300ms ease;
+    transition: border-color 300ms ease, background-color 300ms ease;
+    font-weight: 700;
+}
+.contactCard button:hover{
+    background-color: #222;
+    color: white;
+}
+.contactCardInnerWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contactCard h1{
+    margin: 16px 0px;
 }

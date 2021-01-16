@@ -6,17 +6,18 @@ class SideBar extends Component {
         super(props);
         this.state = {
             itemincart:this.props.cartItems,
-        }
+        }     
     }
-    
+    componentDidMount(){
+        this.setState({left:this.props.left})
+    }
     render() { 
         return ( <>
-        
-        <div className={classes.sidebar} style={{display:'none'}}>
+        <div className={classes.sidebar} style={{display:'none' }}>
             <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',padding:'8px 16px',fontSize:'20px',borderBottom:'1px solid gray',fontWeight:'600'}}>
                 <span>Your Cart</span>
-                <div onClick={()=>{
-                    
+                <div style={{cursor:'pointer'}} onClick={()=>{
+                    this.setState({left:'100%'});
                 }}><i className="fas fa-times"></i></div>
             </div>
             {this.props.cartItems.map((item,index)=>{ return(
@@ -30,13 +31,14 @@ class SideBar extends Component {
                     <button>Remove</button>
                 </div>
             </div>)
-        })}
-          
-            
+        })}                      
         </div>
         </> );
     }
+    
 }
+
+
 const mapStateToProps = (store) =>({
     cartItems: store.cart
 })
