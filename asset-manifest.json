@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Acme-Shop.github.io/static/css/main.3b14cf75.chunk.css",
+    "main.js": "/Acme-Shop.github.io/static/js/main.6be39e2e.chunk.js",
+    "main.js.map": "/Acme-Shop.github.io/static/js/main.6be39e2e.chunk.js.map",
+    "runtime-main.js": "/Acme-Shop.github.io/static/js/runtime-main.2daaaf17.js",
+    "runtime-main.js.map": "/Acme-Shop.github.io/static/js/runtime-main.2daaaf17.js.map",
+    "static/js/2.ae24cf5d.chunk.js": "/Acme-Shop.github.io/static/js/2.ae24cf5d.chunk.js",
+    "static/js/2.ae24cf5d.chunk.js.map": "/Acme-Shop.github.io/static/js/2.ae24cf5d.chunk.js.map",
+    "static/js/3.9e1165ce.chunk.js": "/Acme-Shop.github.io/static/js/3.9e1165ce.chunk.js",
+    "static/js/3.9e1165ce.chunk.js.map": "/Acme-Shop.github.io/static/js/3.9e1165ce.chunk.js.map",
+    "index.html": "/Acme-Shop.github.io/index.html",
+    "static/css/main.3b14cf75.chunk.css.map": "/Acme-Shop.github.io/static/css/main.3b14cf75.chunk.css.map",
+    "static/js/2.ae24cf5d.chunk.js.LICENSE.txt": "/Acme-Shop.github.io/static/js/2.ae24cf5d.chunk.js.LICENSE.txt",
+    "static/media/About.module.css": "/Acme-Shop.github.io/static/media/About BG.45480ab2.jpg",
+    "static/media/Shop.module.css": "/Acme-Shop.github.io/static/media/Feature Product Image.02f0c4a4.jpg",
+    "static/media/Home.module.css": "/Acme-Shop.github.io/static/media/landingImage.29fe2275.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2daaaf17.js",
+    "static/js/2.ae24cf5d.chunk.js",
+    "static/css/main.3b14cf75.chunk.css",
+    "static/js/main.6be39e2e.chunk.js"
+  ]
+}
