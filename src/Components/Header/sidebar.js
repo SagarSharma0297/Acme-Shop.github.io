@@ -1,23 +1,23 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import classes from './Header.module.css'
+import { removeItemFromCart,hideCart1 } from '../ActionCreater';
+
 class SideBar extends Component {
     constructor(props) {
         super(props);
         this.state = {
             itemincart:this.props.cartItems,
+            left:this.props.show,
         }     
-    }
-    componentDidMount(){
-        this.setState({left:this.props.left})
     }
     render() { 
         return ( <>
-        <div className={classes.sidebar} style={{display:'none' }}>
+        <div className={classes.sidebar} style={{left:this.props.left}}>
             <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',padding:'8px 16px',fontSize:'20px',borderBottom:'1px solid gray',fontWeight:'600'}}>
                 <span>Your Cart</span>
                 <div style={{cursor:'pointer'}} onClick={()=>{
-                    this.setState({left:'100%'});
+                    this.props.hideCart()
                 }}><i className="fas fa-times"></i></div>
             </div>
             {this.props.cartItems.map((item,index)=>{ return(
@@ -28,18 +28,26 @@ class SideBar extends Component {
                     
                 </div>
                 <div>
-                    <button>Remove</button>
+                    <button onClick={(e) => {
+                        this.props.removeFromCart(item.id)
+                    }}>Remove</button>
                 </div>
             </div>)
         })}                      
         </div>
         </> );
-    }
-    
+    }    
 }
 
 
 const mapStateToProps = (store) =>({
-    cartItems: store.cart
+    cartItems: store.cart,
+    left:store.showCart,
 })
-export default connect(mapStateToProps)(SideBar);
+
+const mapDispatchToProps = (dispatch) => ({
+    removeFromCart:(id) => dispatch(removeItemFromCart(id)),
+    hideCart:() => dispatch(hideCart1())
+    
+})
+export default connect(mapStateToProps,mapDispatchToProps)(SideBar);

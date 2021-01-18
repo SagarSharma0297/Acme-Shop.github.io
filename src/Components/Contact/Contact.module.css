@@ -53,3 +53,12 @@
 .contactCard h1{
     margin: 16px 0px;
 }
+.container{
+    width: 100%;
+    padding:50px;
+   
+}
+.contactFormWrapper{
+    display: flex;
+    justify-content: space-around;
+}

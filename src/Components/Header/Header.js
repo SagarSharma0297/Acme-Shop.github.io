@@ -4,8 +4,10 @@ import { useHistory } from 'react-router-dom';
 import { connect } from 'react-redux';
 import React from 'react';
 import SideBar from './sidebar';
+import { visibleCart1 } from '../ActionCreater';
 
-const Header = ({count}) => {
+
+const Header = ({count,visibleCart}) => {
     let history = useHistory(); 
     return (  
        
@@ -29,11 +31,14 @@ const Header = ({count}) => {
                     <Link className={classes.menuItems} to="/shop">Shop</Link>
                     <Link className={classes.menuItems} to="/donation">Donate</Link>
                     <Link className={classes.menuItems} to="/contact">Contact</Link>
-                    <div className={classes.cartIcon}><i className="fas fa-shopping-cart"></i><span>{count}</span></div>
+                    <div onClick={()=>{
+                        visibleCart()
+                    }
+                    } className={classes.cartIcon}><i className="fas fa-shopping-cart"></i><span>{count}</span></div>
                 </div>
             </div>
-        </div> 
-        <SideBar/>
+        </div>
+            <SideBar/>
         </>
     );
 }
@@ -41,5 +46,9 @@ const mapStateToProps = (store) =>({
     count: store.cart.length,
     cartItems: store.cart
 })
-export default connect(mapStateToProps)(Header);
+
+const mapDispatchToProps = (dispatch) => ({
+    visibleCart:() => dispatch(visibleCart1())
+})
+export default connect(mapStateToProps,mapDispatchToProps)(Header);
 

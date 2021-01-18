@@ -24,14 +24,15 @@ const Contact = () => {
                 <div className={classes.backgroundwWrapper}>
                 </div>
             </div>
-            <section id>
-            <div>
+            <section className={classes.container}>
+            <div className={classes.contactFormWrapper}>
                 <div className={classes.contactDetails}>
                     <h1>Contact Us</h1>
                     <p>Acme Outdoors <br></br>123 Rainy Street <br></br>Oklahoma City, OK 73129</p>
                     <h4>General Inquiries: <span>(405) 555-5555</span></h4>
                     <h4>Customer Support: <span>(405) 555-5556</span></h4>
                 </div>
+                <form>
                 <div>
                     <h1>Contact Form</h1>
                     <p>Send us a message and we'll get back to you as soon as we can! </p>
@@ -41,7 +42,9 @@ const Contact = () => {
                     <input type="text" placeholder="Enter your email address"></input>
                     <h5>Your Message</h5>
                     <textarea placeholder="Enter your message"></textarea>
+                    <input type="submit"></input>
                 </div>
+                </form>
             </div>
             </section>
         </>
